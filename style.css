@@ -1,0 +1,65 @@
+/* GLOBAL - START */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main: #000;
+    --contrast: #161616;
+    --font: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--main);
+
+    font-size: 1.6rem;
+    color: var(--font);
+}
+
+/* GLOBAL - END */
+
+
+/* BODY - START */
+
+/** HEADER **/
+header {
+    height: 5rem;
+    background-color: var(--contrast);
+    display: flex;
+
+
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    max-height: 100%;
+    padding: .8rem;
+    border-radius: 100%;
+}
+
+.pc {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobil {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
+}
+
+/* BODY - END */
