@@ -41,7 +41,7 @@ p {
 }
 
 ul {
-    list-style: "☘️";
+    list-style: "☘️  ";
     padding: 0 2rem;
 }
 
@@ -61,7 +61,7 @@ header a {
 
 .container {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     flex-wrap: wrap;
 }
 
@@ -83,7 +83,10 @@ header a {
     /** HEADER **/
 
 header {
+    position: fixed;
+    
     height: 5rem;
+    width: 100%;
 
     padding: 0 2rem;
     background-color: var(--contrast);
@@ -134,16 +137,22 @@ header {
     top: 50px;
     right: -5px;
     z-index: 9999;
+
     visibility: hidden;
+
     opacity: 0;
     transition-delay: 0.5s;
+
+    background-color: var(--contrast);
+
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .menu li {
-    text-align: right;
+    padding: 1rem;
+
+    text-align: center;
 }
 
 nav:hover {
@@ -195,6 +204,18 @@ nav:hover .menu {
 main {
     margin: 1rem 12%;
 
+}
+
+.aboutUs {
+    line-height: 3rem;
+}
+
+    /** FOOTER **/
+
+footer {
+    margin: 4rem;
+
+    border-top: 0.1rem solid var(--font);
 }
 
 /* BODY - END */
