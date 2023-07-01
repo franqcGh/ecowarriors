@@ -7,21 +7,23 @@
 }
 
 :root {
-    --main: #ffffff;
-    --contrast: #25e23e;
-    --font: #000000;
+    --main: #000;
+    --contrast: #302f2f;
+    --font: #fff;
+    --button: #5de64b;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --main: #000;
-        --contrast: #161616;
+        --contrast: #302f2f;
         --font: #fff;
     }
 }
 
 html {
     font-size: 62.5%;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 body {
@@ -31,7 +33,7 @@ body {
     color: var(--font);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin: 2rem;
     text-align: center;
 }
@@ -84,10 +86,12 @@ header a {
 
 header {
     position: fixed;
+    z-index: 99999;
     
     height: 5rem;
     width: 100%;
 
+    border-bottom: .1rem solid var(--font);
     padding: 0 2rem;
     background-color: var(--contrast);
 
@@ -207,7 +211,72 @@ main {
 }
 
 .aboutUs {
-    line-height: 3rem;
+    justify-content: center;
+    
+    line-height: 2.5rem;
+}
+
+        /*** BLOG ***/
+
+.blog {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogPost {
+    width: 30rem;
+    
+    margin-top: 4rem;
+    border: .3rem solid var(--font);
+    border-radius: 20%;
+    background-color: var(--contrast);
+    padding: 0 0 2rem;
+
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogImg {
+    height: 18rem;
+}
+
+.blogImg img {
+    position: relative;
+    width: 25rem;
+    top: -55px;
+    left: 0;
+    right: 0;
+
+    border: .8rem solid var(--font);
+    border-radius: 50%;
+}
+
+.blogTitle {
+    background-color: var(--font);
+    color: var(--main);
+
+    display: flex;
+}
+
+.blogDescription {
+    padding: 0 2rem;
+
+    font-size: 1.4rem;
+}
+
+.readMore {
+    cursor: pointer;
+    
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--button);
+
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--font);
+    text-decoration: none;
 }
 
     /** FOOTER **/
@@ -216,6 +285,10 @@ footer {
     margin: 4rem;
 
     border-top: 0.1rem solid var(--font);
+}
+
+footer a {
+    color: var(--font);
 }
 
 /* BODY - END */
