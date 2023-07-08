@@ -138,19 +138,21 @@ header {
 
 .menu {
     position: absolute;
-    top: 50px;
+    top: 0px;
     right: -5px;
     z-index: 9999;
 
     visibility: hidden;
 
     opacity: 0;
-    transition-delay: 0.5s;
+    transition-delay: 0.05s;
 
     background-color: var(--contrast);
+    padding: 0 2rem;
 
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .menu li {
@@ -159,8 +161,10 @@ header {
     text-align: center;
 }
 
-nav:hover {
+nav:hover .menuIcon{
     cursor: pointer;
+    color: var(--contrast);
+    
 }
 
 nav:hover .menu {
@@ -193,13 +197,14 @@ nav:hover .menu {
 }
 
 .hero img {
+    padding: 5rem 0;
     width: 100%;
 }
 
 @media (min-width: 768px) {
     .hero {
         overflow: hidden;
-        height: calc(100vh - 5rem);
+        height: 100vh;
     }
 }
 
