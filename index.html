@@ -15,8 +15,8 @@
         <a href="index.html" class="logoContainer">
             <img class="logo" src="img/ECOWARRIORS.jpg" alt="logo">
 
-            <h2 class="mobil">EW</h2>
-            <h2 class="pc">EcoWarriors</h2>
+            <h3 class="mobil">EW</h3>
+            <h3 class="pc">EcoWarriors</h3>
         </a>
         
         <nav>
@@ -26,16 +26,15 @@
 
             <ul class="menu">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="#aboutUs">Acerca</a></li>
-                <li><a href="#">Actividades</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#">Equipo</a></li>
+                <li><a href="#aboutUs" onclick="menu()">Acerca</a></li>
+                <li><a href="#blog" onclick="menu()">Blog</a></li>
+                <li><a href="#team" onclick="menu()">Equipo</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="hero"> <!-- going to be a carousel -->
-        <img src="img/hero.webp" alt="hero">
+        <img src="img/hero.jpg" alt="hero" class="heroImg">
     </div>
 
     <main>
@@ -76,7 +75,7 @@
                 </div>
                 
                 <p class="blogDescription">Explora la importancia de la segregación de residuos como un pilar fundamental para lograr una gestión sostenible del medio ambiente y sus beneficios para la reducción de la contaminación y el fomento del reciclaje. </p>
-                <a href="#" class="readMore">Leer más ...</a>
+                <a href="#" class="readMore" onclick="blog('blog1')">Leer más ...</a>
             </div>
 
             <div class="blogPost">
@@ -89,7 +88,7 @@
                 </div>
 
                 <p class="blogDescription">Descubre pequeñas acciones que todos podemos tomar para reducir nuestra huella de carbono y ayudar al medio ambiente, desde el ahorro de energía hasta la elección de opciones de transporte más sostenibles.</p>
-                <a href="#" class="readMore">Leer más ...</a>
+                <a href="#" class="readMore" onclick="blog('blog2')">Leer más ...</a>
             </div>
 
             <div class="blogPost">
@@ -102,7 +101,7 @@
                 </div>
                 
                 <p class="blogDescription">Explora la importancia de una gestión integral de residuos en las ciudades y cómo la planificación adecuada puede abordar los desafíos ambientales y mejorar la calidad de vida de los ciudadanos.</p>
-                <a href="#" class="readMore">Leer más ...</a>
+                <a href="#" class="readMore" onclick="blog('blog3')">Leer más ...</a>
             </div>
 
             <div class="blogPost">
@@ -115,7 +114,7 @@
                 </div>
                 
                 <p class="blogDescription">Examina la pérdida de biodiversidad y su impacto en el medio ambiente, y descubre cómo podemos tomar medidas para proteger y conservar los valiosos ecosistemas de nuestro planeta, y principalmente de nuestro país.</p>
-                <a href="#" class="readMore">Leer más ...</a>
+                <a href="#" class="readMore" onclick="blog('blog4')">Leer más ...</a>
             </div>
 
             <div class="blogPost">
@@ -128,21 +127,41 @@
                 </div>
                 
                 <p class="blogDescription">Aprende sobre la economía circular y cómo este enfoque innovador promueve el uso responsable de los recursos, la reutilización y el reciclaje, contribuyendo a un medio ambiente más saludable.</p>
-                <a href="#" class="readMore">Leer más ...</a>
+                <a href="#" class="readMore" onclick="blog('blog5')">Leer más ...</a>
             </div>
 
             <div class="blogPost">
-                más
+                <div class="blogImg">
+                    <img src="img/blog6.webp" alt="">
+                </div>
+                
+                <div class="blogTitle">
+                    <h3>El papel de las energías renovables en  la sostenibilidad energética</h3>
+                </div>
+                
+                <p class="blogDescription">Enfrentamos un desafío global en términos de sostenibilidad energética. La dependencia de los combustibles fósiles y la explotación intensiva de recursos naturales están generando impactos ambientales negativos. </p>
+                <a href="#" class="readMore" onclick="blog('blog6')">Leer más ...</a>
             </div>
+
         </section>
 
     </main>
 
-    <footer>
+    <article class="blogSection">
+        <h2 id="blogSectionTitle"></h2>
+
+        <section id="blogSectionContent"></section>
+        
+    </article>
+
+
+    <footer id="team">
         <h4>Developed by <a href="http://franqc.com">FranQC</a></h4>
         
 
     </footer>
+
+    <script src="blogjason.js"></script>
 
     <script src="script.js"></script>
 </body>
